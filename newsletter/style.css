@@ -1,0 +1,207 @@
+/* start variables */
+:root {
+    --MainColor: #232742;
+    --MainTransition: 0.3s;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #36384d;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    background-color: #fff;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    padding: 25px;
+    gap: 15px;
+    border-radius: 25px;
+}
+/* end variables */
+/* start box */
+.box {
+    width: 300px;
+    height: 350px;
+    padding: 20px 0;
+}
+.box .info {
+    margin-bottom: 15px;
+}
+.box h1 {
+    font-size: 30px;
+    color: var(--MainColor);
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.box p {
+    font-size: 11px;
+}
+.box .updates-list {
+    margin-bottom: 30px;
+}
+.box .update  {
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.box .update img {
+    width: 15px;
+    margin-right: 7px;
+}
+.box form .email {
+    margin-bottom: 20px;
+    position: relative;
+    width: 80%;
+}
+.box .email span {
+    position: absolute;
+    right: 0;
+    font-size: 10px;
+    color: red;
+    opacity: 0;
+}
+.box form .email label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--MainColor);
+    margin-bottom: 5px;
+}
+.box form .email input {
+    width: 100%;
+    height: 35px;
+    outline-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: var(--MainTransition);
+    padding-left: 10px;
+}
+.box form .email input:focus {
+    outline: 1px solid var(--MainColor);
+}
+.box form .email input:focus::placeholder {
+    opacity: 0;
+}
+.box form button {
+    width: 80%;
+    padding: 10px;
+    border-color: transparent;
+    background-color: var(--MainColor);
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--MainTransition);
+    font-size: 11px;
+    border: none;
+    position: relative;
+    z-index: 0;
+}
+.box form button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: linear-gradient(240deg, #ff673e 0%, #ff673e 40%, #ff5476 100%);
+    z-index: -1;
+    border-radius: 5px;
+    transition: var(--MainTransition);
+}
+.box form button:hover::before {
+    width: 100%;
+}
+/* end box */
+/* start image */
+.image {
+    width: 250px;
+    background-image: url(/images/desktop/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* end image */
+
+/* start success */
+.success {
+    display: none;
+    width: 300px;
+    padding:  0 20px;
+}
+.success img {
+    margin-bottom: 20px;
+    width: 60px;
+}
+.success h1 {
+    font-size: 25px;
+    color: var(--MainColor);
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.success p {
+    font-size: 11px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+.success p span {
+    font-weight: bold;
+}
+.success button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--MainColor);
+    border: none;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 0;
+}
+.success button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: linear-gradient(240deg, #ff673e 0%, #ff673e 40%, #ff5476 100%);
+    z-index: -1;
+    border-radius: 5px;
+    transition: var(--MainTransition);
+}
+.success button:hover::before {
+    width: 100%;
+}
+/* end success */
+@media(max-width: 615px) {
+    .container {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        align-items: center;
+        padding: 0;
+    }
+    .box {
+        max-width: 100%;
+        padding-left: 5px;
+    }
+    .image {
+        background-image: url(/images/mobile/illustration-sign-up-mobile.svg);
+        height: 250px;
+        width: 99%;
+        background-size: contain;
+        background-position: center;
+    }
+}

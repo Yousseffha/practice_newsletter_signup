@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>newsletter</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <!-- css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- js file -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box">
+        <div class="info">
+          <h1>Stay updated</h1>
+          <p>join 60,000+ product managers reciving monthly updates on:</p>
+        </div>
+        <div class="updates-list">
+            <div class="update">
+                <img src="/images/icon-list.svg" alt="">
+                <span>Product discovery and building what matters</span>
+            </div>
+            <div class="update">
+                <img src="/images/icon-list.svg" alt="">
+                <span>measuring to ensure updates are success</span>
+            </div>
+            <div class="update">
+                <img src="/images/icon-list.svg" alt="">
+                <span>and much more</span>
+            </div>
+        </div>
+        <form action="">
+            <div class="email">
+                <span>Enter a valid email</span>
+                <label for="email">Email address</label>
+                <input type="text" id="email" placeholder="email@company.com">
+            </div>
+            <button id="subscribeBtn">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+      <div class="image" id="imageSection"></div>
+      <div class="success" id="success">
+        <img src="/images/icon-success.svg" alt="">
+        <h1>Thank you for subscribing!</h1>
+        <p>A confirming mail was sent to <span>ash@loremcompany.com</span> please open it and click the button inside to confirm your subscription</p>
+        <button id="dissmissBtn">Dissmiss message</button>
+      </div>
+    </div>
+  </body>
+</html>
